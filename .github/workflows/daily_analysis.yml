@@ -82,6 +82,10 @@ jobs:
           # ==========================================
           # 数据源
           # ==========================================
+          env:
+          TUSHARE_PRIORITY: 10          # 将 Tushare 优先级设为最低
+          EFINANCE_PRIORITY: 0          # 确保 efinance 优先级最高
+          AKSHARE_PRIORITY: 1
           TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
           
           # ==========================================
